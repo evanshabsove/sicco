@@ -61,3 +61,37 @@ html, body {
 .carousel-control.left, .carousel-control.right {
     background-image: none;
 }
+
+.first-home {
+  background-color: #91c499;
+}
+
+.second-home {
+  background-color: #cfd11a;
+}
+
+.third-home {
+  background-color: #f2e9dc;
+}
+
+.fourth-home {
+  background-color: #808f85;
+}
+
+.feature-divider-home {
+  margin-bottom: 1.8em;
+  border-color: #595959;
+}
+
+.feature-title, .feature-list {
+  margin: 0;
+}
+
+.feature-title {
+  padding-top: 22px;
+  padding-left: 12px;
+}
+
+.feature-list {
+  padding-bottom: 40px;
+}
