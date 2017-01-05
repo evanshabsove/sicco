@@ -1,0 +1,2 @@
+class AreaOfPracticeController < ApplicationController
+end
