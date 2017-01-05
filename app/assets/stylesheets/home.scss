@@ -1,3 +1,39 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+  height: 100%
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+  position: absolute !important;
+  width: 100% !important;
+  z-index: 10 !important;
+  border-radius: 0 !important;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+}
+
+.oval-circle {
+  border-radius: 10px;
+  border: 2px solid #fff;
+  text-align: center;
+  width: 150px;
+  margin-left: 44%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}

@@ -1,0 +1,24 @@
+nav.navbar {
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: black;
+}
+
+ul.nav a:hover {
+  border-bottom: solid black;
+  padding-bottom: 7px;
+  color: black;
+}
+
+.nav.navbar-nav.navbar-right li a:hover, .nav.navbar-nav.navbar-right li a:focus {
+    color: black;
+}
+
+nav.navbar-inverse .navbar-brand:hover,
+nav.navbar-inverse .navbar-brand:focus {
+  color: black;
+}
