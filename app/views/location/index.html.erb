@@ -1,1 +1,58 @@
-<h1>Location</h1>
+
+<div id="map">
+
+</div>
+
+<script type="text/javascript">
+  var locationLat = ""
+  var locationLong = ""
+
+  function initMap() {
+
+  }
+
+  $.ajax({
+    url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + "5464 Dundas St. W, Etobicoke, ON" + "&key=AIzaSyB08GRk2ZArZa6PeELdo-DIK6b4uhEypH8",
+    dataType: "JSON",
+    method: "GET"
+  }).done(function(data){
+    locationLat = data["results"][0]["geometry"]["location"]["lat"]
+    locationLong = data["results"][0]["geometry"]["location"]["lng"]
+    console.log(locationLat, locationLong)
+    makeMap()
+  })
+
+  function makeMap() {
+
+  }
+
+  function makeMap() {
+    var uluru = {lat: locationLat, lng: locationLong};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: uluru
+    });
+
+    var contentString = '<p>5464 Dundas St. W., Suite 200</p>' +
+                        '<p>Toronto, Ontario M9B 1B4</p>' +
+                        '<p>Phone: (416) 231-6555 Ext: 241</p>' +
+                        '<p>psicco@mwlc.ca</h3>'
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+    marker.addListener('click', function(){
+      infowindow.open(map, marker);
+    });
+  }
+
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB08GRk2ZArZa6PeELdo-DIK6b4uhEypH8&callback=initMap">
+
+</script>
