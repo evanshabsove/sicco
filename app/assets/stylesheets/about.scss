@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .page-banner {
   background-color: #cfd11a;
+  margin-top: 85px;
 }
 
 .banner-text {
@@ -29,4 +30,17 @@
 .img-about {
   margin: auto;
   margin-bottom: 18px;
+}
+
+nav.navbar-fixed-top-about-index {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+nav.navbar.about-index {
+  background-color: white;
+  background: white;
+  border-color: white;
 }
