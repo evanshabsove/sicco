@@ -1,3 +1,34 @@
 // Place all the styles related to the Testimonials controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+nav.navbar-fixed-top-testimonials-index {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+nav.navbar.testimonials-index {
+  background-color: white;
+  background: white;
+  border-color: white;
+}
+
+.testimonial, .testimonial-last {
+  background-color: #f2e9dc;
+  margin-top: 20px;
+}
+
+.testimonial-last {
+  margin-bottom: 20px;
+}
+
+.testimonial-person {
+  background-color: #595959;
+  width: 15%;
+}
+ .testimonial-text {
+   text-align: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
