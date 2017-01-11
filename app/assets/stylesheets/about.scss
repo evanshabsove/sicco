@@ -16,15 +16,25 @@
  .about-text::before {
    content: "";
    top: 0;
+   left: -80px;
    width: 200%;
    height: 120%;
-   display: block;
    position: absolute;
-   background: #595959;
+   background: #f2e9dc;
    transform: skewX(15deg);
+   display: block;
+   z-index: -10;
  }
 
 .big-pierre {
+  z-index: -100;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.about-text-detail {
+  z-index: 1000;
 }
 
 .feature-divider-about {

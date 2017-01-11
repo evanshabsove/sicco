@@ -20,8 +20,22 @@
         <h3 class="heading-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut dui ligula. Donec ultricies in odio bibendum dignissim. Ut efficitur nisi turpis. Donec ullamcorper feugiat justo. Aenean venenatis ante eu dolor pretium vestibulum. Nunc eget mattis lacus. Proin sed purus placerat, scelerisque mi eu, convallis tortor.</h3>
         <h1>Heading 3</h1>
         <hr class="feature-divider-about">
-        <h3 class="heading-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut dui ligula.</h3>
+        <h3 class="heading-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut dui ligula. Donec ultricies in odio bibendum dignissim. Ut efficitur nisi turpis. Donec ullamcorper feugiat justo. Donec ultricies in odio bibendum dignissim. Ut efficitur nisi turpis. Donec ullamcorper feugiat justo Donec ultricies in odio bibendum dignissim.</h3>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+$(function() {
+
+  var $body = $(document);
+  $body.bind('scroll', function() {
+      // "Disable" the horizontal scroll.
+      if ($body.scrollLeft() !== 0) {
+          $body.scrollLeft(0);
+      }
+  });
+
+});
+</script>
