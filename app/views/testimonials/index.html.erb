@@ -5,35 +5,41 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 testimonial">
-      <h3>Wow, Pierre is such a nice guy. I don't think I know anyone better, and his work with law! Crazy. Sometimes I sit and think, why can't I be more like Pierre? He's a lawyer for crying out loud, A LAWYER! All I can do is just sit here and type code.</h3>
-      <h3>This is an example of another paragraph. stuff could go here</h3>
-      <div class="testimonial-person">
-        <h4 class="testimonial-text">Evan, Shabsove</h4>
-      </div>
+<div class="container-fluid testimonial-container">
+  <div class="row testimonial-row">
+    <div class="col-xs-6">
+      <%= image_tag "office_photos/_MG_7666.jpg", :class => "testimonial-photo" %>
     </div>
-    <div class="col-sm-12 testimonial">
-      <h3>Wow, Pierre is such a nice guy. I don't think I know anyone better, and his work with law! Crazy. Sometimes I sit and think, why can't I be more like Pierre? He's a lawyer for crying out loud, A LAWYER! All I can do is just sit here and type code.</h3>
-      <h3>This is an example of another paragraph. stuff could go here</h3>
-      <div class="testimonial-person">
-        <h4 class="testimonial-text">Evan, Shabsove</h4>
+    <div class="col-xs-6 col-xs-6 testimonial">
+      <div class="testimonial-text">
+        <h3>Wow, Pierre is such a nice guy. I don't think I know anyone better, and his work with law! Crazy. Sometimes I sit and think, why can't I be more like Pierre? He's a lawyer for crying out loud, A LAWYER! All I can do is just sit here and type code.</h3>
+        <h3>This is an example of another paragraph. stuff could go here</h3>
+        <h4>Evan, Shabsove</h4>
       </div>
-    </div>
-    <div class="col-sm-12 testimonial">
-      <h3>Wow, Pierre is such a nice guy. I don't think I know anyone better, and his work with law! Crazy. Sometimes I sit and think, why can't I be more like Pierre? He's a lawyer for crying out loud, A LAWYER! All I can do is just sit here and type code.</h3>
-      <h3>This is an example of another paragraph. stuff could go here</h3>
-      <div class="testimonial-person">
-        <h4 class="testimonial-text">Evan, Shabsove</h4>
+      <div class="testimonial-text">
+        <h3>Wow, Pierre is such a nice guy. I don't think I know anyone better, and his work with law! Crazy. Sometimes I sit and think, why can't I be more like Pierre? He's a lawyer for crying out loud, A LAWYER! All I can do is just sit here and type code.</h3>
+        <h3>This is an example of another paragraph. stuff could go here</h3>
+        <h4>Evan, Shabsove</h4>
       </div>
-    </div>
-    <div class="col-sm-12 testimonial-last">
-      <h3>Wow, Pierre is such a nice guy. I don't think I know anyone better, and his work with law! Crazy. Sometimes I sit and think, why can't I be more like Pierre? He's a lawyer for crying out loud, A LAWYER! All I can do is just sit here and type code.</h3>
-      <h3>This is an example of another paragraph. stuff could go here</h3>
-      <div class="testimonial-person">
-        <h4 class="testimonial-text">Evan, Shabsove</h4>
+      <div class="testimonial-text">
+        <h3>Wow, Pierre is such a nice guy. I don't think I know anyone better, and his work with law! Crazy. Sometimes I sit and think, why can't I be more like Pierre? He's a lawyer for crying out loud, A LAWYER! All I can do is just sit here and type code.</h3>
+        <h3>This is an example of another paragraph. stuff could go here</h3>
+        <h4>Evan, Shabsove</h4>
       </div>
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+$(function() {
+
+  var $body = $(document);
+  $body.bind('scroll', function() {
+      // "Disable" the horizontal scroll.
+      if ($body.scrollLeft() !== 0) {
+          $body.scrollLeft(0);
+      }
+  });
+
+});
+</script>
