@@ -13,13 +13,18 @@
   padding-bottom: 26px;
   margin-bottom: 20px;
 }
-
-.about-text {
-
-}
+ .about-text::before {
+   content: "";
+   top: 0;
+   width: 200%;
+   height: 120%;
+   display: block;
+   position: absolute;
+   background: #595959;
+   transform: skewX(15deg);
+ }
 
 .big-pierre {
-
 }
 
 .feature-divider-about {
