@@ -33,10 +33,10 @@
   <!--end of nav bar -->
     <%= yield %>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row info-footer">
         <div class="col-xs-6 text-center">
           <p class="footer-nav">
-            <%= link_to "ABOUT", about_path %> | <%= link_to "AREA OF PRACTICE", area_of_practice_path %> | <%= link_to "TESTIMONIALS", testimonials_path %> | <%= link_to "LOCATION", location_path %>
+            <%= link_to "ABOUT", about_path, :class => "footer-link" %> | <%= link_to "AREA OF PRACTICE", area_of_practice_path, :class => "footer-link" %> | <%= link_to "TESTIMONIALS", testimonials_path, :class => "footer-link" %> | <%= link_to "LOCATION", location_path, :class => "footer-link" %>
           </p>
         </div>
         <div class="col-xs-4 col-xs-offset-2">
