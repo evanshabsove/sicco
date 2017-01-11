@@ -1,15 +1,18 @@
 
 .nav.navbar-nav.navbar-right li a {
     color: black;
-}
-
-ul.nav a:hover {
-  border-bottom: solid black;
-  padding-bottom: 7px;
-  color: black;
+    background-color: #f2e9dc;
+    margin-right: 15px;
+    border-radius: 2px;
+    -webkit-transition: background-color 400ms linear;
+    -moz-transition: background-color 400ms linear;
+    -o-transition: background-color 400ms linear;
+    -ms-transition: background-color 400ms linear;
+    transition: background-color 400ms linear;
 }
 
 .nav.navbar-nav.navbar-right li a:hover, .nav.navbar-nav.navbar-right li a:focus {
+    background-color: #91c499;
     color: black;
 }
 
