@@ -1,44 +1,52 @@
 // Place all the styles related to the Testimonials controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-nav.navbar-fixed-top-testimonials-index {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 1030;
+
+div.container-testimonial {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(office_photos/_MG_7666.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-color: transparent;
 }
 
-nav.navbar.testimonials-index {
-  background-color: #595959;
-  background: #595959;
-  border-color: #595959;
-}
-
-.testimonial-row::before {
-  content: "";
-  top: 0;
-  left: 40%;
+div.vertical-center-row {
   width: 100%;
   height: 100%;
-  position: absolute;
-  background: #f2e9dc;
-  transform: skewX(15deg);
-  display: block;
-  z-index: -10;
+  padding: 0 !important;
+  margin: 0;
 }
 
 .testimonial-text {
+  color: white;
+  width: auto;
+  background: #333533;
+  height: 100%;
+  padding-right: 0;
+  padding-top: 240px;
 }
 
-.testimonial {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.testimonial-paragraph {
+  font-size: 40px;
+}
+.testimonial-writer {
+  font-size: 30px;
+  font-weight: bold
 }
 
-.testimonial-photo {
-  z-index: -100;
-  position: absolute;
-  left: 0;
+.row::before {
+  content: "";
   top: 0;
-  height: 700px;
+  left: 40%;
+  width: 53%;
+  height: 100%;
+  position: absolute;
+  background: #333533;
+  transform: skewX(15deg);
+  display: block;
 }

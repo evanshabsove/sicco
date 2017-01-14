@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Eczar', media: 'all'  %>
+    <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Lato', media: 'all'  %>
     <%= javascript_include_tag 'application' %>
   </head>
 
@@ -32,36 +32,5 @@
   </nav>
   <!--end of nav bar -->
     <%= yield %>
-    <div class="container-fluid">
-      <div class="row info-footer">
-        <div class="col-xs-6 text-center">
-          <p class="footer-nav">
-            <%= link_to "ABOUT", about_path, :class => "footer-link" %> | <%= link_to "AREA OF PRACTICE", area_of_practice_path, :class => "footer-link" %> | <%= link_to "TESTIMONIALS", testimonials_path, :class => "footer-link" %> | <%= link_to "LOCATION", location_path, :class => "footer-link" %>
-          </p>
-        </div>
-        <div class="col-xs-4 col-xs-offset-2">
-          <h1>Contact Us</h1>
-          <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 5464 Dundas St. W., Suite 200</p>
-          <p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (416) 231-6555 Ext: 241</p>
-          <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> psicco@mwlc.ca</p>
-        </div>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-2 col-xs-offset-2">
-            <h3>
-              Copy right of Pierre Sicco
-            </h3>
-          </div>
-          <div class="col-xs-4 col-xs-offset-4">
-            <h3>
-              Some other text
-            </h3>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
