@@ -1,64 +1,47 @@
 // Place all the styles related to the area_of_practice controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.row-area-practice {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.area-title {
-  position: absolute;
-  top: 140px;
-  left: 15px;
-  width: 100%;
-}
-
-.area-content {
-  position: absolute;
-  top: 0px;
-  left: 15px;
-  width: 100%;
+.area-text {
+  color: white;
   height: 100%;
-  margin: 0px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.6);
+  background: -webkit-linear-gradient(left,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(56,119,128,0), rgba(56,119,128,0.8)); /*Standard*/
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
-.area-title span {
+div.container-area {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+    background: url(office_photos/_MG_7719.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: transparent;
+}
+
+.option-2 {
+  display: none;
+}
+
+.option-3 {
+  display: none;
+}
+
+select.form-control {
+  width: 30%;
   color: white;
-  font: bold 24px/45px;
-  letter-spacing: -1px;
-  background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-  opacity: 1;
+  background-color: #51a7b3;
+  border-color: #387760;
+  font-size: 20px;
+  height: 40px;
 }
-
-.area-content .content-span {
-  color: white;
-  display: block;
-  letter-spacing: -1px;
-  background: rgb(0, 0, 0); /* fallback color */
-  background: rgba(0, 0, 0, 0.7);
-  height: 240px;
-  width: 360px;
-  border-radius: 6px;
-  padding: 10px;
-  vertical-align: middle;
-  opacity: 0;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-}
-
- .hovereffect:hover .content-span {
-   opacity: 1;
- }
-
- .hovereffect:hover .area-title span {
-   opacity: 0;
- }
