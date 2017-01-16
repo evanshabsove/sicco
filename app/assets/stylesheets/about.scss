@@ -22,7 +22,11 @@ div.row {
 }
 div.about-text {
   height: 100%;
-  background: #387780;
+  background: -webkit-linear-gradient(left,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(56,119,128,0), rgba(56,119,128,0.8)); /*Standard*/
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 .about-text-detail {
   z-index: 1000;

@@ -25,10 +25,14 @@ div.vertical-center-row {
 .testimonial-text {
   color: white;
   width: auto;
-  background: #387780;
   height: 100%;
   padding-right: 0;
   padding-top: 240px;
+  background: -webkit-linear-gradient(left,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(56,119,128,0), rgba(56,119,128,0.8)); /*Standard*/
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.6);
 }
 
 .testimonial-paragraph {
@@ -46,7 +50,11 @@ div.vertical-center-row {
   width: 53%;
   height: 100%;
   position: absolute;
-  background: #387780;
   transform: skewX(15deg);
   display: block;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Fx 3.6-15*/
+  background: linear-gradient(to right, rgba(56,119,128,0.8), rgba(56,119,128,0)); /*Standard*/
 }
