@@ -10,8 +10,11 @@
   background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
   background: linear-gradient(to right, rgba(56,119,128,0), rgba(56,119,128,0.8)); /*Standard*/
   display: flex;
+  display: -webkit-flex;
   justify-content: center;
+  -webkit-justify-content: center;
   align-items: center;
+  -webkit-align-items: center;
 }
 
 div.container-area {
