@@ -22,24 +22,15 @@ div.vertical-center-row {
   margin: 0;
 }
 
+.img-top {
+  display: none;
+}
+
 .testimonial-text {
   color: white;
   width: auto;
-  height: 100%;
   padding-right: 0;
-  background: -webkit-linear-gradient(left,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
-  background: linear-gradient(to right, rgba(56,119,128,0), rgba(56,119,128,0.8)); /*Standard*/
   text-shadow: 2px 4px 3px rgba(0,0,0,0.6);
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  -webkit-justify-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  flex-direction: column;
-  -webkit-flex-direction: column;
 }
 
 .testimonial-paragraph {
@@ -48,4 +39,81 @@ div.vertical-center-row {
 .testimonial-writer {
   font-size: 30px;
   font-weight: bold
+}
+
+@media (min-width:1200px) {
+  .testimonial-text {
+    height: 100%;
+    background: -webkit-linear-gradient(left,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(56,119,128,0), rgba(56,119,128,0.8)); /*Standard*/
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+
+}
+@media (min-width:760px) {
+  .footer-text-testimonial {
+    color: #ced3dc;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width:1200px) {
+  .testimonial-text {
+    height: 60%;
+    background-color: #387780;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  div.img-top-col {
+    height: 40%;
+    padding: 0;
+  }
+
+  .img-top {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+}
+
+@media (max-width: 759px) {
+
+  .testimonial-paragraph {
+    font-size: 30px;
+  }
+
+  .testimonial-writer {
+    font-size: 20px;
+    font-weight: bold
+  }
+
+  div.home-footer-testimonial {
+    width: 100%;
+    background: black;
+  }
+
+  p.footer-text-testimonial {
+    color: #ced3dc;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: white;
+  }
 }
