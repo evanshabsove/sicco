@@ -2,64 +2,73 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#map {
-  width: 50%;
-  height: 100%;
-  z-index: -100;
-}
-
-.map-row::before {
-  content: "";
-  top: 0;
-  left: 40%;
-  width: 53%;
-  height: 100%;
-  position: absolute;
-  background: -webkit-linear-gradient(left,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(right,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Fx 3.6-15*/
-  background: linear-gradient(to right, rgba(56,119,128,0.8), rgba(56,119,128,0)); /*Standard*/
-  transform: skewX(15deg);
-  display: block;
-}
-
-.map-row {
+div.container-map {
   height: 100%;
   width: 100%;
-  display: flex;
+  padding: 0;
   background: url(map.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.location-box {
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  -webkit-justify-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  width: 50%;
   height: 100%;
-  background: -webkit-linear-gradient(left,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Safari 5.1-6*/
-  background: -o-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
-  background: linear-gradient(to right, rgba(56,119,128,0), rgba(56,119,128,0.8)); /*Standard*/
+  background-color: transparent;
 }
 
-.location-text {
-  z-index: 100;
-  color: white;
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.6);
+div.map-row {
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+  margin: 0;
 }
 
-.location-text h2 {
-  font-size: 42px;
+@media (min-width:1200px) {
+  .map-row::before {
+    content: "";
+    top: 0;
+    left: 40%;
+    width: 53%;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(56,119,128,0.8), rgba(56,119,128,0)); /*Standard*/
+    transform: skewX(15deg);
+    display: block;
+  }
+}
+
+@media (max-width: 759px) {
+
+  div.container-map {
+    background: none;
+  }
+
+  .testimonial-paragraph {
+    font-size: 30px;
+  }
+
+  .testimonial-writer {
+    font-size: 20px;
+    font-weight: bold
+  }
+
+  div.home-footer-testimonial {
+    width: 100%;
+    background: black;
+  }
+
+  p.footer-text-testimonial {
+    color: #ced3dc;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: white;
+  }
+
+  img.location-img {
+    padding-top: 25px;
+  }
 }
