@@ -35,8 +35,7 @@ div.map-row {
     background: -moz-linear-gradient(right,rgba(56,119,128,0.8),rgba(56,119,128,0)); /*Fx 3.6-15*/
     background: linear-gradient(to right, rgba(56,119,128,0.8), rgba(56,119,128,0)); /*Standard*/
     transform: skewX(15deg);
-    display: block;
-  }
+  background: red; /* For browsers that do not support gradients */  background: red; /* For browsers that do not support gradients */  background: red; /* For browsers that do not support gradients */  }
 }
 
 @media (max-width: 759px) {
@@ -71,4 +70,35 @@ div.map-row {
   img.location-img {
     height: 100%;
   }
+}
+
+div.email-container {
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Standard syntax */
+}
+
+div.email-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+div.email-input{
+  
 }
