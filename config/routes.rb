@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get '/area_of_practice', to: 'area_of_practice#index'
   get '/testimonials', to: 'testimonials#index'
   get '/location', to: 'location#index'
+  post '/location', to: 'location#create', as: 'create_email'
+
 
 end

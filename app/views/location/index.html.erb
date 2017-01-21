@@ -22,7 +22,12 @@
 <div class="email-container">
   <div class="email-box">
     <div class="email-input">
-
+      <%= bootstrap_form_for @email, url: create_email_path do |f| %>
+        <%= f.email_field :email_address %>
+        <%= f.text_field :email_subject %>
+        <%= f.text_area :email_content %>
+        <%= f.submit "Send email" %>
+      <% end %>
     </div>
   </div>
 </div>
@@ -38,10 +43,13 @@ $(function() {
   });
 
   $(".location-button").on("click", function(){
-    $(".email-box").fadeIn()
+    $(".email-container").fadeIn()
+    $(".email-input").on("click", function (){
+      event.stopPropagation()
+    });
     $(".email-box").on("click", function(){
-      $(".email-box").fadeOut()
-    })
+      $(".email-container").fadeOut()
+    });
   });
 });
 </script>
