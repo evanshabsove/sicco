@@ -45,6 +45,15 @@ Rails.application.configure do
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
 
+  config.action_mailer.smtp_settings = {
+    :user_name => ENV["send_gird_user"],
+    :password => ENV["send_gird_pass"],
+    :domain => 'pierresiccoweb.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
