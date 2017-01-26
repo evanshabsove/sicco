@@ -33,7 +33,7 @@ production:
   encoding: unicode
   database: sicco_production
   username: sicco
-  password: Sicco694957
+  password: ENV["database_pass"]
 
 cucumber:
   <<: *TEST
