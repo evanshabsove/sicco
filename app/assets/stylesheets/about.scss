@@ -118,7 +118,7 @@ h3.heading-description {
     text-align: center;
   }
 
-  .nav-item-home {
+  .name-logo {
     display: none !important;
   }
 }
@@ -182,6 +182,9 @@ h3.heading-description {
     display: none !important;
   }
 
+  .about-text-last {
+    display: none;
+  }
 }
 
 @media (max-width: 759px) {
@@ -201,5 +204,5 @@ h3.heading-description {
   .img-logo {
     display: none !important;
   }
-
+  
 }
