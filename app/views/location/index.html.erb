@@ -10,6 +10,7 @@
         <h2 class="location-text">Toronto, Ontario M9B 1B4</h3>
         <h2 class="location-text">Phone (416) 231-6555 Ext: 241</h2>
         <button type="button" class="btn btn-warning btn-lg location-button">Email Me</button>
+        <h2 class="location-text"><a href="#" class="map-button"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></a>Map View<h2>
       </div>
     </div>
   </div>
@@ -31,6 +32,18 @@
     </div>
   </div>
 </div>
+<div class="map-container">
+  <div class="map-box">
+    <div id="map">
+
+    </div>
+  </div>
+</div>
+
+<script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB08GRk2ZArZa6PeELdo-DIK6b4uhEypH8&callback=initMap">
+</script>
+
 <script type="text/javascript">
 $(function() {
 
@@ -51,5 +64,64 @@ $(function() {
       $(".email-container").fadeOut()
     });
   });
+
+  $(".map-button").on("click", function(){
+    $(".map-container").fadeIn()
+    $("#map").on("click", function (){
+      event.stopPropagation()
+    });
+    $(".map-box").on("click", function(){
+      $(".map-container").fadeOut()
+    });
+
+    var locationLat = ""
+    var locationLong = ""
+
+    function initMap() {
+
+    }
+
+    $.ajax({
+      url: "https://maps.googleapis.com/maps/api/geocode/json?address=" + "5464 Dundas St. W, Etobicoke, ON" + "&key=AIzaSyB08GRk2ZArZa6PeELdo-DIK6b4uhEypH8",
+      dataType: "JSON",
+      method: "GET"
+    }).done(function(data){
+      locationLat = data["results"][0]["geometry"]["location"]["lat"]
+      locationLong = data["results"][0]["geometry"]["location"]["lng"]
+      console.log(locationLat, locationLong)
+      makeMap()
+    })
+
+    function makeMap() {
+
+    }
+
+    function makeMap() {
+      var uluru = {lat: locationLat, lng: locationLong};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: uluru
+      });
+
+      var contentString = '<p>5464 Dundas St. W., Suite 200</p>' +
+                          '<p>Toronto, Ontario M9B 1B4</p>' +
+                          '<p>Phone: (416) 231-6555 Ext: 241</p>' +
+                          '<p>psicco@mwlc.ca</h3>'
+
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+      marker.addListener('click', function(){
+        infowindow.open(map, marker);
+      });
+     }
+  });
+
+
 });
 </script>
