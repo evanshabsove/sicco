@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.about-container {
-  overflow: hidden;
-}
 
 div.about-row {
   height: inherit;
@@ -77,9 +74,11 @@ h3.heading-description {
     -webkit-align-items: center;
     flex-direction: column;
     -webkit-flex-direction: column;
-    padding-top: 10vh;
+    margin-top: 7vh;
+    padding-top: 3vh;
     padding-bottom: 5vh;
   }
+
 
   .row::before {
     content: "";
@@ -184,6 +183,10 @@ h3.heading-description {
 
   .about-text-last {
     display: none;
+  }
+
+  div.about-container {
+    height: 100vh
   }
 }
 
