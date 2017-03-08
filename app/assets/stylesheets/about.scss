@@ -74,9 +74,7 @@ h3.heading-description {
     -webkit-align-items: center;
     flex-direction: column;
     -webkit-flex-direction: column;
-    margin-top: 7vh;
-    padding-top: 3vh;
-    padding-bottom: 5vh;
+    height: 100vh;
   }
 
 
@@ -119,6 +117,11 @@ h3.heading-description {
 
   .name-logo {
     display: none !important;
+  }
+
+  div.about-container {
+    height: 100vh;
+    overflow: hidden;
   }
 }
 
