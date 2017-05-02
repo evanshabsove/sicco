@@ -1,3 +1,26 @@
 <div class="dashboard-container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#about">About</a></li>
+    <li><a data-toggle="tab" href="#practice">Area of Practice</a></li>
+    <li><a data-toggle="tab" href="#testimonials">Testimonials</a></li>
+    <li><a data-toggle="tab" href="#contact">Contact Us</a></li>
 
+  </ul>
+  <div class="tab-content">
+    <div id="about" class="tab-pane fade in active">
+      <%= render "about" %>
+    </div>
+    <div id="practice" class="tab-pane fade">
+      <h3>Practice</h3>
+      <p>Some content in menu 1.</p>
+    </div>
+    <div id="testimonials" class="tab-pane fade">
+      <h3>testimonials</h3>
+      <p>Some content in menu 2.</p>
+    </div>
+    <div id="contact" class="tab-pane fade">
+      <h3>contact</h3>
+      <p>Some content in menu 2.</p>
+    </div>
+  </div>
 </div>
