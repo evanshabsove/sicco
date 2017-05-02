@@ -7,7 +7,8 @@ class UsersController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save
-      redirect_to dashboard_url
+      session[:user_id] = user.id
+      redirect_to dashboard_index_url
     else
       redirect_to root_url
     end

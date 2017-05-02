@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/testimonials', to: 'testimonials#index'
   get '/location', to: 'location#index'
   post '/location', to: 'location#create', as: 'create_email'
-
+  resources :users
+  resources :dashboard
 
 end
