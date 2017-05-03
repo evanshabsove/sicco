@@ -5,16 +5,19 @@
     </div>
     <div class="col-lg-6 testimonial-text">
       <div class="fade-in one">
-        <div class="carousel-container">
-          <% @areas_of_practice.each do |a| %>
-            <li>
-              <div class="entry-container">
-                <h1 class="entry-header"><%= a.title %></h1>
-                <p class="entry-description"><%= a.description %></p>
-              </div>
-            </li>
+        <select id="name" name="name" class="form-control">
+          <% @areas_of_practice.each_with_index do |f, index| %>
+          <option value="<%= index + 1 %>" name="first"><%= f.title %></option>
           <% end %>
-        </div>
+        </select>
+        <% @areas_of_practice.each_with_index do |f, index| %>
+          <div class="option-<%= index + 1 %> area-of-interest-text-container">
+            <h1 class="area-of-practice-title"><%= f.title %></h1>
+            <p class="area-of-practice-paragraph">
+              <%= f.description %>
+            </p>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -28,31 +31,8 @@
 <script type="text/javascript">
   $(function(){
     $('#name').on("change", function(){
-      if ($(this).val() === '1') {
-        $('.option-2').css({
-          display: 'none'
-        });
-        $('.option-3').css({
-          display: 'none'
-        });
-        $('.option-1').fadeIn(2000);
-      } else if ($(this).val() === '2') {
-        $('.option-1').css({
-          display: 'none'
-        });
-        $('.option-3').css({
-          display: 'none'
-        });
-        $('.option-2').fadeIn(2000);
-      } else if ($(this).val() === '3') {
-          $('.option-1').css({
-            display: 'none'
-        });
-        $('.option-2').css({
-          display: 'none'
-        });
-        $('.option-3').fadeIn(2000);
-      };
+      $(".area-of-interest-text-container").css("display", "none")
+      $(".option-"+ $(this).val()).css("display", "block")
     });
   });
 </script>
