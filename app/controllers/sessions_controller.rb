@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     user = User.find_by('lower(username) = ?', session_params[:username].downcase)
     if user && user.authenticate(session_params[:password])
       session[:user_id] = user.id
-      redirect_to dashboard_url
+      redirect_to dashboard_index_url
     else
       redirect_to root_url
     end
