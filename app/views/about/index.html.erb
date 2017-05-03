@@ -6,15 +6,10 @@
     </div>
     <div class="col-lg-6 about-text">
       <div class="about-text-detail fade-in one">
-        <div class="carousel-container">
-          <% @entries.each do |e| %>
-            <li>
-              <div class="entry-container">
-                <h1 class="entry-header"><%= e.title %></h1>
-                <p class="entry-description"><%= e.description %></p>
-              </div>
-            </li>
-          <% end %>
+            <div class="entry-container">
+              <h1 class="entry-header"><%= @entry.title %></h1>
+              <p class="entry-description"><%= @entry.description %></p>
+            </div>
         </div>
 
         <!-- <div class="entry-container">
