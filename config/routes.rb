@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   post '/location', to: 'location#create', as: 'create_email'
   resources :users
   resources :dashboard
+  resources :sessions
 
 end
