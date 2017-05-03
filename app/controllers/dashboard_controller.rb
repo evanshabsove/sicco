@@ -7,7 +7,15 @@ class DashboardController < ApplicationController
     @areas_of_interest = Entry.where(category: "area_of_interest")
     @testimonials = Entry.where(category: "testimonial")
     @contact = Entry.where(category: "contact")
+  end
 
+  def handle_request
+    @entry = Entry.new
+    @entry.category = params[:category]
+    respond_to do |format|
+      format.html
+      format.json { render json: {:success => true, html: (render_to_string('_popup-modal.html.erb',object: @entry, layout: false))} }
+    end
   end
 
   private
