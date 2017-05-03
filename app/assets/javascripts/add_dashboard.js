@@ -6,7 +6,9 @@ $(function() {
       data: {"category": $(this).attr("id")},
       method: "POST"
     }).done(function(responseData) {
-      console.log(responseData);
+      // console.log(responseData);
+      $("body").append(responseData.html)
+      $(".modal").modal()
     })
   })
 })

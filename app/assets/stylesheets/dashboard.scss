@@ -30,3 +30,20 @@
     margin-top: 1vh;
     /* color: green; */
 }
+.modal-container {
+    text-align: center;
+    z-index: 10000;
+    position: absolute;
+    width: 70vw;
+    margin-top: 20vh;
+    margin-left: 15vw;
+    height: 43vh;
+    margin-right: 15vw;
+    background-color: white;
+    border-radius: 8px;
+}
+.modal-contents {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 8%;
+}
