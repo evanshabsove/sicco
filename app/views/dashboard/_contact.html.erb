@@ -1,0 +1,25 @@
+<div class="add-button-container">
+  <%= button_tag "+", class:"btn btn-primary add-button", id: "contact" %>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contact.each_with_index do |a, index| %>
+    <tr>
+      <th scope="row"><%= index + 1 %></th>
+      <td><%= a.title %></td>
+      <td><%= a.description %></td>
+      <td><%= button_tag "Edit", class:"btn btn-primary edit-button" %></td>
+      <td><%= button_to "Delete", entry_url(a.id), method: :delete, class:"btn btn-primary delete-button" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

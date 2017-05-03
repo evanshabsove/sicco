@@ -1,0 +1,49 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.dashboard-container {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    position: absolute;
+    background: white;
+}
+
+.delete-button {
+  background-color: #ff6767 !important;
+  border-color: #da5858 !important;
+}
+.delete-button:hover {
+  background-color: #e45656 !important;
+  border-color: #da5858 !important;
+}
+.edit-button {
+
+}
+.add-button {
+  background-color: #30da30 !important;
+  border-color: #33a533 !important;
+}
+.add-button-container {
+    text-align: right;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    /* color: green; */
+}
+.modal-container {
+    text-align: center;
+    z-index: 10000;
+    position: absolute;
+    width: 70vw;
+    margin-top: 20vh;
+    margin-left: 15vw;
+    height: 43vh;
+    margin-right: 15vw;
+    background-color: white;
+    border-radius: 8px;
+}
+.modal-contents {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 8%;
+}
