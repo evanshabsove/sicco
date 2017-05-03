@@ -13,7 +13,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <%= form_for @entry do |f| %>
+          <%= form_for @entry, url: entries_url, method: "post" do |f| %>
           <div class="form-group">
             <%= f.text_field :title, class:"form-control", placeholder: "Title" %>
           </div>
@@ -21,13 +21,12 @@
             <%= f.text_area :description, class:"form-control", placeholder: "Description"  %>
           </div>
           <div class="form-group">
-            <%= f.text_field :category, class:"form-control", text: "#{@entry.category}", disabled: true  %>
+            <%= f.text_field :category, class:"form-control", text: "#{@entry.category}", readonly: true%>
           </div>
+          <%= f.submit "Save", class:"btn btn-primary" %>
+
         </div>
-        <div class="modal-footer">
-          <%= f.submit "Save Changes", class:"btn btn-primary" %>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+
         <% end %>
 
       </div>
