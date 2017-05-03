@@ -7,6 +7,12 @@ class EntriesController < ApplicationController
     end
   end
 
+  def destroy
+    entry = Entry.find_by_id(params[:id])
+    entry.destroy!
+    redirect_to dashboard_index_url
+  end
+
 
   private
 
