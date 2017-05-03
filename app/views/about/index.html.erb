@@ -6,7 +6,22 @@
     </div>
     <div class="col-lg-6 about-text">
       <div class="about-text-detail fade-in one">
-        <h1>Experienced</h1>
+        <div class="carousel-container">
+          <% @entries.each do |e| %>
+            <li>
+              <div class="entry-container">
+                <h1 class="entry-header"><%= e.title %></h1>
+                <p class="entry-description"><%= e.description %></p>
+              </div>
+            </li>
+          <% end %>
+        </div>
+
+        <!-- <div class="entry-container">
+          <h1 class="entry-header">oqineioqwieounqw</h1>
+          <p class="entry-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, libero eu consectetur aliquam, sapien mauris tincidunt mauris, mattis sagittis neque nisl quis justo. Donec at ante ac felis sollicitudin porttitor at sed elit. Nunc rhoncus ipsum laoreet lacus dictum dapibus cursus a neque. Sed non placerat sapien, vel finibus turpis. Integer posuere a eros id hendrerit. Nulla sed tempor mi, eget imperdiet dui. Sed molestie fringilla ligula nec commodo. Duis ut sollicitudin urna. Donec ornare malesuada maximus. Phasellus blandit eros sit amet libero hendrerit posuere. Vestibulum fringilla lacinia orci, eu varius odio condimentum in. Sed finibus diam non ullamcorper aliquam. Duis in viverra arcu, ut blandit mauris. Nunc lobortis purus ultrices massa ullamcorper congue. Nulla facilisi. Maecenas et cursus felis.</p>
+        </div> -->
+        <!-- <h1>Experienced</h1>
         <hr class="feature-divider-about">
         <h3 class="heading-description">With over 22 years’ experience in family law in Etobicoke, Mississauga, west Toronto, I can assist you with your family law issues. I have helped hundreds of clients resolve simple and  complex issues, through negotiations, mediation, arbitration, or litigation including trials.</h3>
         <h1>Attention to Clients</h1>
@@ -19,7 +34,7 @@
           <h1>Cost-effective Resolution</h1>
           <hr class="feature-divider-about">
           <h3 class="heading-description">I always strive to develop the most cost-effective approach towards resolving issues, always in consultation with clients.  I encourage client to save costs and to perform tasks that do not require the assistance of a lawyer or a law clerk.</h3>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
