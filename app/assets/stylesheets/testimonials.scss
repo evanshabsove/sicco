@@ -40,6 +40,17 @@ div.vertical-center-row {
   font-size: 30px;
   font-weight: bold
 }
+.testimonial-text {
+    padding-right: 90px !important;
+}
+@media (max-width: 1200px) {
+  .carousel-container {
+    width: 80vw !important;
+    margin-left: 8.5vw !important;
+    margin-right: 10vw !important;
+  }
+
+}
 
 @media (min-width:1200px) {
   .testimonial-text {
