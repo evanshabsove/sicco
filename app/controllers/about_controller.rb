@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
   def index
-    @entry = Entry.first
+    @entry = Entry.where(category: "about")
   end
 end

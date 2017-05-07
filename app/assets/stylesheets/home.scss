@@ -117,6 +117,12 @@ nav.navbar.home-index {
   color: white;
 }
 /*scrolling text */
+
+html.home-index, body.home-index {
+  height: 100%;
+  width: 100%;
+}
+
 @keyframes slide {
   0% { transform: translateY(-100%); opacity: 1;}
   100% { transform: translateY(0%); opacity: 1;}

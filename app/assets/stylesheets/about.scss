@@ -2,12 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.about-container {
-  height: 100%;
-}
 
-div.row {
-  height: 100%;
+div.about-row {
+  height: inherit;
 }
 
 .image-div {
@@ -65,7 +62,6 @@ h3.heading-description {
 
 @media (min-width:1200px) {
   div.about-text {
-    height: 100%;
     background: -webkit-linear-gradient(left,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Safari 5.1-6*/
     background: -o-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Opera 11.1-12*/
     background: -moz-linear-gradient(right,rgba(56,119,128,0),rgba(56,119,128,0.8)); /*Fx 3.6-15*/
@@ -78,8 +74,9 @@ h3.heading-description {
     -webkit-align-items: center;
     flex-direction: column;
     -webkit-flex-direction: column;
-    margin-top: 16px;
+    height: 100vh;
   }
+
 
   .row::before {
     content: "";
@@ -97,12 +94,12 @@ h3.heading-description {
     background: linear-gradient(to right, rgba(56,119,128,0.8), rgba(56,119,128,0)); /*Standard*/
   }
 
-  html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-  }
+  // html, body {
+  //   height: 100%;
+  //   width: 100%;
+  //   margin: 0;
+  //   overflow: hidden;
+  // }
 
   .big-pierre {
     z-index: -100;
@@ -121,15 +118,20 @@ h3.heading-description {
   .name-logo {
     display: none !important;
   }
+
+  div.about-container {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 @media (min-width:760px) and (max-width:1200px) {
 
-  html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-  }
+  // html, body {
+  //   height: 100%;
+  //   width: 100%;
+  //   margin: 0;
+  // }
 
   div.lawyer-name {
     display: block;
@@ -184,6 +186,10 @@ h3.heading-description {
 
   .about-text-last {
     display: none;
+  }
+
+  div.about-container {
+    height: 100vh
   }
 }
 
