@@ -9,12 +9,21 @@ class DashboardController < ApplicationController
     @contact = Entry.where(category: "contact")
   end
 
+
   def handle_request
-    @entry = Entry.new
-    @entry.category = params[:category]
-    respond_to do |format|
-      format.html
-      format.json { render json: {:success => true, html: (render_to_string('_popup-modal.html.erb',object: @entry, layout: false))} }
+    if params[:method] == "edit"
+      @entry = Entry.find_by_id(params[:id])
+      respond_to do |format|
+        format.html
+        format.json { render json: {:success => true, html: (render_to_string('_edit-modal.html.erb',object: @entry, layout: false))} }
+      end
+    else
+      @entry = Entry.new
+      @entry.category = params[:category]
+      respond_to do |format|
+        format.html
+        format.json { render json: {:success => true, html: (render_to_string('_popup-modal.html.erb',object: @entry, layout: false))} }
+      end
     end
   end
 
