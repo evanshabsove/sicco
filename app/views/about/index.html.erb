@@ -7,8 +7,11 @@
     <div class="col-lg-6 about-text">
       <div class="about-text-detail fade-in one">
             <div class="entry-container">
-              <h1 class="entry-header"><%= @entry.title %></h1>
-              <p class="entry-description"><%= @entry.description %></p>
+              <% @entry.each do |entry| %>
+                <h1 class="entry-header"><%= entry.title %></h1>
+                <hr class="feature-divider-about">
+                <h4 class="entry-description"><%= entry.description %></h4>
+              <% end %>
             </div>
         </div>
 

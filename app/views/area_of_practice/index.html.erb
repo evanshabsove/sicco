@@ -1,7 +1,7 @@
 <div class="container-fluid container-area">
   <div class="row map-row">
     <div class="col-lg-6 img-top-col">
-      <%= image_tag "office_photos/_MG_7719.jpg", :class => "img-top" %>
+      <%= image_tag "cherry.jpg", :class => "img-top" %>
     </div>
     <div class="col-lg-6 testimonial-text">
       <div class="fade-in one">
@@ -13,9 +13,9 @@
         <% @areas_of_practice.each_with_index do |f, index| %>
           <div class="option-<%= index + 1 %> area-of-interest-text-container">
             <h1 class="area-of-practice-title"><%= f.title %></h1>
-            <p class="area-of-practice-paragraph">
+            <h3 class="area-of-practice-paragraph">
               <%= f.description %>
-            </p>
+            </h3>
           </div>
         <% end %>
       </div>
