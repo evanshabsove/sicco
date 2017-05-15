@@ -7,6 +7,7 @@ class DashboardController < ApplicationController
     @areas_of_practice = Entry.where(category: "area_of_practice")
     @testimonials = Entry.where(category: "testimonial")
     @contact = Entry.where(category: "contact")
+    @home_pages = Entry.where(category: "home-page")
   end
 
 
