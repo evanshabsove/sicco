@@ -88,22 +88,17 @@ div.vertical-center-row {
     background-color: #387780;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  div.img-top-col {
-    height: 40%;
-    padding: 0;
-  }
-
-  .img-top {
-    display: block;
-    max-width: 100%;
-    height: 100%;
+    margin-top: 40vh;
   }
 
 }
 
 @media (max-width: 759px) {
+
+  div.testimonial-text {
+    margin-top: 0;
+    height: inherit;
+  }
 
   .testimonial-paragraph {
     font-size: 30px;
@@ -114,9 +109,36 @@ div.vertical-center-row {
     font-weight: bold
   }
 
+  div.img-top-col {
+    height: 220px;
+    padding: 0;
+  }
+
+  div.carousel-container {
+    margin-left: 15px !important;
+  }
+
+  .img-top {
+    display: block;
+    min-width: 100%;
+    height: 100%;
+  }
+
   div.home-footer-testimonial {
     width: 100%;
     background: black;
+  }
+
+  div.container-area {
+    height: inherit !important;
+  }
+
+  div.container-map {
+    height: auto !important;
+  }
+
+  div.container-testimonial {
+    height: inherit;
   }
 
   p.footer-text-testimonial {
