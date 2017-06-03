@@ -85,10 +85,17 @@ div.vertical-center-row {
 @media (max-width:1200px) {
   .testimonial-text, .homepage-text {
     height: 60%;
-    background-color: #387780;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 40vh;
+  }
+
+  .testimonial-text {
+    background-color: #387780;
+  }
+
+  .homepage-text {
+    background-color: transparent;
   }
 
 }
