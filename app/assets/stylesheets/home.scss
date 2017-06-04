@@ -63,7 +63,7 @@ div.container-homepage {
 }
 .sub-title {
   padding-top: 50px;
-  color: yellow
+  color: white;
 }
 
 
@@ -150,6 +150,10 @@ html.home-index, body.home-index {
     left: 0;
     width: 100%;
     text-align: center;
+  }
+
+  div.container-homepage {
+    background-position: 43% 50%;
   }
 
 }
