@@ -31,21 +31,6 @@ nav.navbar {
   font-size: 1.5em !important;
 }
 
-div.container-homepage {
-  height: 100%;
-  width: 100%;
-  background: url('rendered.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
 .row-flex {
   width: auto;
 }
@@ -135,8 +120,38 @@ html.home-index, body.home-index {
  100% { -webkit-transform: translateY(0%); opacity: 1;}
 }
 
+div.container-homepage {
+  height: 100%;
+  width: 100%;
+  background: url('rendered.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 0px;
+  padding-left: 0px;
+}
 
 @media (max-width: 759px) {
+
+  div.container-homepage {
+    height: 100%;
+    width: 100%;
+    background: url('trying_out.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
   html.home-index, body.home-index {
     height: 100%;
     width: 100%;

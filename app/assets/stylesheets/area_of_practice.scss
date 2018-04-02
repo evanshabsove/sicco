@@ -21,12 +21,6 @@ div.container-area {
   height: 100vh;
   width: 100%;
   padding: 0;
-    background: url(cherry.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: transparent;
 }
 
 .option-2 {
@@ -37,11 +31,33 @@ div.container-area {
   display: none;
 }
 
+.testimonial-text {
+  background-color: white;
+}
+
 select.form-control {
-  width: 30%;
   color: white;
   background-color: #51a7b3;
   border-color: #387760;
   font-size: 20px;
   height: 40px;
+}
+
+@media (min-width:1200px) {
+
+  select.form-control {
+    width: 30%;
+  }
+
+}
+
+@media (min-width:760px) {
+  div.container-area {
+      background: url(cherry.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: transparent;
+  }
 }
