@@ -28,6 +28,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 
 gem 'sendgrid-ruby'
+
+gem 'sprockets', '~>3.7.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
