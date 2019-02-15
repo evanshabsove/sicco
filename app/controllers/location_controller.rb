@@ -7,7 +7,7 @@ class LocationController < ApplicationController
     @email = Email.new(email_params)
     if @email.save
       UserNotifierMailer.send_signup_email(@email).deliver
-      redirect_to root_url
+      redirect_to thank_you_index_path
       flash[:notice] = "Email succesfully sent!"
     else
       redirect_to location_url

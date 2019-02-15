@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :sessions
   resources :entries
+  resources :thank_you
 
   post '/dashboard/handle_request', to: "dashboard#handle_request", as: "create_entry"
 
