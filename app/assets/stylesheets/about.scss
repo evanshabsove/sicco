@@ -64,6 +64,7 @@ h3.heading-description {
 
 
   .row::before {
+    z-index: 1;
     content: "";
     top: 0;
     left: 38%;
