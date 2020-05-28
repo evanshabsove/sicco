@@ -9,8 +9,8 @@
         <% @testimonials.each do |t| %>
           <li>
             <div class="entry-container">
-              <h1 class="entry-header"><%= t.title %></h1>
-              <p class="entry-description"><%= t.description %></p>
+              <h1 class="entry-header"><%= t.title.html_safe %></h1>
+              <p class="entry-description"><%= t.description.html_safe %></p>
             </div>
           </li>
         <% end %>
